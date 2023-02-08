@@ -41,4 +41,11 @@ class Dealership
   end
   individual_car_cost.sum
   end
+
+  def details
+    details = {
+      "total_value" => total_value,
+      "address" => address
+    }
+  end
 end

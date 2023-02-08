@@ -90,7 +90,7 @@ RSpec.describe Dealership do
     expect(dealership.total_value).to eq(156000)
    end
 
-   xit 'dealership has details based on total value and address' do
+   it 'dealership has details based on total value and address' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
     car_1 = Car.new("Ford Mustang", 1500, 36)
     car_2 = Car.new("Toyota Prius", 1000, 48)

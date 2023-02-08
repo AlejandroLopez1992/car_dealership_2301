@@ -18,13 +18,13 @@ RSpec.describe Dealership do
   end
 
 
-  xit 'has initial empty array of inventory' do
+  it 'has initial empty array of inventory' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
 
     expect(dealership.inventory).to eq([])
   end
 
-  xit 'inventory count is 0 when inventory is empty' do
+  it 'inventory count is 0 when inventory is empty' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
 
     expect(dealership.inventory_count).to eq(0)

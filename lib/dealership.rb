@@ -19,4 +19,12 @@ class Dealership
   def add_car(car)
     @inventory << car
   end
+
+  def has_inventory?
+    if @inventory == []
+     return false
+    else
+      true
+    end
+  end
 end

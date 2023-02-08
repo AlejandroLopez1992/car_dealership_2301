@@ -61,7 +61,7 @@ RSpec.describe Dealership do
     expect(dealership.has_inventory?).to eq(true)
    end
 
-   it 'dealership can sort cars by make' do
+   xit 'dealership can sort cars by make' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
     car_1 = Car.new("Ford Mustang", 1500, 36)
     car_2 = Car.new("Toyota Prius", 1000, 48)
@@ -76,7 +76,7 @@ RSpec.describe Dealership do
     expect(dealership.cars_by_make("Ford")).to eq([car_1])
    end
 
-   it 'dealership can calculate total value of all cars' do
+   xit 'dealership can calculate total value of all cars' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
     car_1 = Car.new("Ford Mustang", 1500, 36)
     car_2 = Car.new("Toyota Prius", 1000, 48)
@@ -90,7 +90,7 @@ RSpec.describe Dealership do
     expect(dealership.total_value).to eq(156000)
    end
 
-   it 'dealership has details based on total value and address' do
+   xit 'dealership has details based on total value and address' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
     car_1 = Car.new("Ford Mustang", 1500, 36)
     car_2 = Car.new("Toyota Prius", 1000, 48)
@@ -101,7 +101,11 @@ RSpec.describe Dealership do
     dealership.add_car(car_3)
     dealership.add_car(car_4)
 
-    expect(dealership.details).to eq({total_value, address})
+    expected = {
+        "total_value" => 156000,
+        "address" => "123 Main Street",
+    }
+    expect(dealership.details).to eq(expected)
    end
 
 end

@@ -34,5 +34,11 @@ class Dealership
     end
   end
 
-  
+  def total_value
+  individual_car_cost = []
+  inventory.each do |car|
+    individual_car_cost << car.total_cost
+  end
+  individual_car_cost.sum
+  end
 end

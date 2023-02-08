@@ -76,7 +76,7 @@ RSpec.describe Dealership do
     expect(dealership.cars_by_make("Ford")).to eq([car_1])
    end
 
-   xit 'dealership can calculate total value of all cars' do
+   it 'dealership can calculate total value of all cars' do
     dealership = Dealership.new("Acme Auto", "123 Main Street")
     car_1 = Car.new("Ford Mustang", 1500, 36)
     car_2 = Car.new("Toyota Prius", 1000, 48)
